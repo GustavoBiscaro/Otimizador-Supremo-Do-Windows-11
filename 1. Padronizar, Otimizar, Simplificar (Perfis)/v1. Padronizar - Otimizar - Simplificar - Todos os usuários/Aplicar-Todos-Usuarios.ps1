@@ -62,6 +62,12 @@ $UserCommands = @(
     # Comando 13 - Desativar destaques dinamicos da pesquisa
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v IsDynamicSearchBoxEnabled /t REG_DWORD /d 0 /f'
 
+     # 14 - Impedir pesquisa de Internet pelo Menu Iniciar
+    'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSearchInternetInStartMenu /t REG_DWORD /d 1 /f'
+
+    # 15 - Desativar destaques da pesquisa
+    'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v IsDynamicSearchBoxEnabled /t REG_DWORD /d 0 /f'
+
 )
 
 # ============================================================
