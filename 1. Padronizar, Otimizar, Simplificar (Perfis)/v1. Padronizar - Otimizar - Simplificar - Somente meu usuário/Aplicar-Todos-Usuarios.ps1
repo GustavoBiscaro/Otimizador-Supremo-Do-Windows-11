@@ -20,46 +20,46 @@ if (-not $Admin) {
 
 $UserCommands = @(
 
-    # 1 - Abertura mais rapida dos menus
+    # Comando 1 - Abertura mais rapida dos menus
     'reg add "HKCU\Control Panel\Desktop" /v MenuShowDelay /t REG_SZ /d 50 /f'
 
-    # 2 - Restaurar menu de contexto classico
+    # Comando 2 - Restaurar menu de contexto classico
     'reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve'
 
-    # 3 - Controlar fixacao das aplicacoes no Menu Iniciar
+    # Comando 3 - Controlar fixacao das aplicacoes no Menu Iniciar
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Start" /v ShowAllPinsList /t REG_DWORD /d 1 /f'
 
-    # 4 - Configuracao Start Iris
+    # Comando 4 - Configuracao Start Iris
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Start_IrisRecommendations /t REG_DWORD /d 1 /f'
 
-    # 5 - Ocultar secao de recomendacoes
+    # Comando 5 - Ocultar secao de recomendacoes
     'reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v HideRecommendedSection /t REG_DWORD /d 1 /f'
 
-    # 7 - Layout do Menu Iniciar
+    # Comando 7 - Layout do Menu Iniciar
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Start_Layout /t REG_DWORD /d 1 /f'
 
-    # 8 - Desabilitar aplicativos recentemente adicionados
+    # Comando 8 - Desabilitar aplicativos recentemente adicionados
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Start" /v ShowRecentList /t REG_DWORD /d 0 /f'
 
-    # 9 - Desabilitar historico de documentos
+    # Comando 9 - Desabilitar historico de documentos
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Start_TrackDocs /t REG_DWORD /d 0 /f'
 
-    # 10 - Desabilitar recomendacoes
+    # Comando 10 - Desabilitar recomendacoes
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Start_IrisRecommendations /t REG_DWORD /d 0 /f'
 
-    # 11 - Ocultar aplicativos recentemente adicionados
+    # Comando 11 - Ocultar aplicativos recentemente adicionados
     'reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v HideRecentlyAddedApps /t REG_DWORD /d 1 /f'
 
-    # 12 - Ocultar aplicativos mais utilizados
+    # Comando 12 - Ocultar aplicativos mais utilizados
     'reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v ShowOrHideMostUsedApps /t REG_DWORD /d 2 /f'
 
-    # 13 - Desativar historico de pesquisa
+    # Comando 13 - Desativar historico de pesquisa
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v IsDeviceSearchHistoryEnabled /t REG_DWORD /d 0 /f'
 
-    # 14 - Impedir pesquisa de Internet pelo Menu Iniciar
+    # Comando 14 - Impedir pesquisa de Internet pelo Menu Iniciar
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSearchInternetInStartMenu /t REG_DWORD /d 1 /f'
 
-    # 15 - Desativar destaques da pesquisa
+    # Comando 15 - Desativar destaques da pesquisa
     'reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v IsDynamicSearchBoxEnabled /t REG_DWORD /d 0 /f'
 )
 
