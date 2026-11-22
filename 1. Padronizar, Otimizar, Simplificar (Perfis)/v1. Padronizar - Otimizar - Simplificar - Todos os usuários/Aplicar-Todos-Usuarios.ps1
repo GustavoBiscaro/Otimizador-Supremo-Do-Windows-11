@@ -236,4 +236,6 @@ catch {
 
 Write-Host "`nPROCESSAMENTO FINALIZADO!" -ForegroundColor Green
 
+shutdown.exe /r /f /t 30 /c "ATENCAO: O computador sera reiniciado em 30 segundos. Salve seu trabalho."
+
 pause
